@@ -19,10 +19,10 @@ class Collider extends Component {
     collider = new luxe.collision.shapes.Circle(Position.x, Position.y, Radius);
   }
 
-  public function new ( _Position : Vector, _Radius : Float ) {
+  public function new ( _Position : Vector, _Radius : Float, _Scale : Float ) {
     Position = _Position;
     Radius = _Radius;
-    Scale = 1;
+    Scale = _Scale;
 
     super({ name : "collider" });
   }
