@@ -43,14 +43,10 @@ class Main extends luxe.Game {
     y.pos = Luxe.screen.cursor.pos;
     cy.Position = y.pos;
 
-    if(luxe.collision.Collision.shapeWithShape(cy.collider, cm.collider) != null) {
+    if(luxe.collision.Collision.shapeWithShape(cy.collider, cm.collider) != null) { //colliding this frame
       trace('bang');
     }
-  }
-
-  override function onkeyup( event : luxe.KeyEvent) {
-    if(event.keycode == Key.space) {
-      //scale
+    else { //not colliding this frame 
     }
   }
 
